@@ -14,7 +14,7 @@ get_type() %>%
 ```
 
 ## Product label (with logo)
-![](https://raw.githubusercontent.com/fakea/master/fakea_products/fakea_mångfald.png)
+![](https://raw.githubusercontent.com/borstell/fakea/master/fakea_products/fakea_mångfald.png)
 
 ```
 get_type() %>%
