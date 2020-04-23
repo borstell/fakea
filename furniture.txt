@@ -1,0 +1,61 @@
+fainting couch	sofa
+bunk bed	bed
+waterbed	bed
+jukebox	record player
+radio receiver	radio receiver
+futon	bed
+daybed	bed
+sofa bed	sofa
+chess table	table
+hammock	hammock
+billiard table	table
+couch	sofa
+chest of drawers	drawers
+kitchen cabinet	cabinet
+accubita	accubita
+hoosier cabinet	cabinet
+love seat	chair
+canopy bed	bed
+fauteuil	chair
+pinball machine	arcade
+hatstand	hatstand
+curio cabinet	cabinet
+bathroom cabinet	cabinet
+wine rack	rack
+cupboard	cupboard
+bookcase	bookcase
+bean bag	bean bag
+hall tree	hatstand
+platform bed	bed
+mattress	mattress
+sleigh bed	bed
+chair	chair
+infant bed	bed
+stipo a bambocci	room
+television set	television
+filing cabinet	cabinet
+footstool	footstool
+bar cabinet	cabinet
+rocking chair	chair
+bar chair	chair
+toddler bed	bed
+gun cabinet	cabinet
+piano	music
+pantry	kitchen
+entertainment center	hifi system
+four-poster bed	bed
+baker's rack	rack
+recliner	chair
+floating shelf	shelf
+chaise longue	chair
+lift chair	chair
+tuffet	room
+wardrobe	wardrobe
+nightstand	nightstand
+plant stand	potted plant
+murphy bed	bed
+closet	closet
+cabinetry	cabinet
+plan chest	cabinet
+liquor cabinet	cabinet
+chifforobe	room
