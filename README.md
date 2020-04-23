@@ -21,3 +21,34 @@ get_type() %>%
   make_tag(logo=2, currency = "£")
 ```
 ![](https://raw.githubusercontent.com/borstell/fakea/master/fakea_products/fakea_mångfald.png)
+
+# Simulate other languages/countries
+With an added language variable, you can simulate products from another country/language. Currently available:
+
+## Welsh 
+`language="cy"`
+![](https://raw.githubusercontent.com/borstell/fakea/master/fakea_products/fakea_Llanelli.png)
+
+## Finnish 
+`language="fi"`
+![](https://raw.githubusercontent.com/borstell/fakea/master/fakea_products/fakea_ennätys.png)
+
+## Dutch (NL) 
+`language="nl"`
+![](https://raw.githubusercontent.com/borstell/fakea/master/fakea_products/fakea_systeem.png)
+
+## Hebrew (IL) 
+`language="il"`
+![](https://raw.githubusercontent.com/borstell/fakea/master/fakea_products/fakea_שדרות.png)
+
+## English (TT) 
+`language="tt"`
+![](https://raw.githubusercontent.com/borstell/fakea/master/fakea_products/fakea_Llanelli.png)
+
+## English (UK) 
+`language="uk"`
+![](https://raw.githubusercontent.com/borstell/fakea/master/fakea_products/fakea_Stow-on-the-Wold.png)
+
+## English (US) 
+`language="us"`
+![](https://raw.githubusercontent.com/borstell/fakea/master/fakea_products/fakea_truck.png)
