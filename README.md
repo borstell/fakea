@@ -6,7 +6,7 @@ Create fake furniture product names
 To avoid terrible attempts at pseudo-Swedish/Scandinavian product names, here's a package that supplies you with some 12,000 fake products -- all based on actual Swedish words and place names (as they should).
 
 ## Product label (plain)
-![](https://github.com/borstell/fakea/master/fakea_products/fakea_ojämn.png)
+![](https://raw.githubusercontent.com/borstell/fakea/master/fakea_products/fakea_ojämn.png)
 
 ```
 get_type() %>%
@@ -14,7 +14,7 @@ get_type() %>%
 ```
 
 ## Product label (with logo)
-![](https://github.com/borstell/fakea/master/fakea_products/fakea_mångfald.png)
+![](https://raw.githubusercontent.com/fakea/master/fakea_products/fakea_mångfald.png)
 
 ```
 get_type() %>%
