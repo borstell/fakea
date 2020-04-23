@@ -1,4 +1,4 @@
-<img src="https://raw.githubusercontent.com/borstell/fakea/master/fakea_package.png" width="600">
+<img src="https://raw.githubusercontent.com/borstell/fakea/master/fakea_package.png" width="1200">
 
 # FAKEA /fejka/
 Create fake furniture product names
