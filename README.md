@@ -67,7 +67,7 @@ With an added language variable, you can simulate products from another country/
 
 ## English (TT) 
 `language="tt"`
-![](https://raw.githubusercontent.com/borstell/fakea/master/fakea_products/fakea_Llanelli.png)
+![](https://raw.githubusercontent.com/borstell/fakea/master/fakea_products/fakea_Speyside.png)
 
 ## English (UK) 
 `language="uk"`
