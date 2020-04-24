@@ -125,16 +125,44 @@ make_logo <- function(logo=2, currency="$",language="sw", txt1="FEJKA", txt2="R 
   return(destfile)
 }
 
-get_ikea_name <- function(name) {
-  d <- hash()
-  d["a"] <- c("ä", "å")
-  d["o"] <- c("ö")
-  rev_name <-stringi::stri_reverse(tolower(name))
-  ikea_name <- gsub("o", "ö", sub("a", sample(c("å", "ä"),1), rev_name))
+get_ikea_name <- function(name, original=FALSE, swedify=FALSE) {
+  name <- tolower(name)
+  if (swedify == TRUE) {
+    name <- gsub("sch", "X", name)
+    name <- gsub("ch", "Y", name)
+    name <- gsub("ck", "Z", name)
+    name <- gsub("cc", "Z", name)
+    name <- gsub("c", "k", gsub("z", "s", name))
+    name <- gsub("X", "hcs", name)
+    name <- gsub("Y", "hc", name)
+    name <- gsub("Z", "kc", name)
+  }
+  rev_name <-stringi::stri_reverse(name)
+  if (original == TRUE) {
+    d <- hash()
+    d["a"] <- c("ä")
+    d["o"] <- c("ö")
+    d["e"] <- c("ë")
+    d["i"] <- c("ï")
+    d["u"] <- c("ü")
+    first_vowel <- str_extract(rev_name, "[aeiou]")
+    ikea_name <- sub(first_vowel, values(d[first_vowel])[[1]], rev_name)
+  }
+  else {
+    ikea_name <- gsub("a", sample(c("a", "å", "ä"),1), gsub("o", sample(c("o", "ö"),1), sub("a", sample(c("å", "ä"),1), rev_name)))
+  }
   ikea_name <- paste0(toupper(substr(ikea_name, 1, 1)), substr(ikea_name, 2, nchar(ikea_name)))
   return(ikea_name)
 }
 
+# get_ikea_name("Orbacka")
+# get_ikea_name("Orbacka", original=T, swedify = F)
+# get_ikea_name("Orbacka", original=F, swedify = T)
+# get_ikea_name("Orbacka", original=T, swedify = T)
+# get_ikea_name("Schokoladechance", original=F, swedify = T)
+
+
 # make_logo(txt1 = get_ikea_name("Umlauts"), txt2 = get_ikea_name("Your Ikeaname"), destfile = "./ikea_name.png")
+# make_logo(txt1 = get_ikea_name("Umlauts", original=T), txt2 = get_ikea_name("Your Ikeaname", original=T), destfile = "./ikea_name_original.png")
 
 # make_logo(currency = "v", txt3 = "1.0.0")
