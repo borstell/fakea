@@ -5,10 +5,16 @@ Create fake furniture product names
 
 To avoid terrible attempts at pseudo-Swedish/Scandinavian product names, here's a package that supplies you with some 12,000 fake products – all based on actual Swedish words and place names (as they should).
 
+## Installation
+```
+devtools::install_github("borstell/fakea")
+```
+
+
 ## Product label (plain)
 
 ```
-get_type() %>%
+get_cat() %>%
   make_tag(logo=2, currency = "$")
 ```
 ![](https://raw.githubusercontent.com/borstell/fakea/master/fakea_products/fakea_ojämn.png)
@@ -23,25 +29,29 @@ get_type() %>%
 ![](https://raw.githubusercontent.com/borstell/fakea/master/fakea_products/fakea_mångfald.png)
 
 # The "IKEA name" function
-I've seen the _Your IKEA name is your name backwards with an umlaut on the first vowel_. I don't think this is super accurate as the only Swedish "umlauts" are _ä_ and _ö_ (and _å_ if you count [the more uniquely Swedish letter](https://en.wikipedia.org/wiki/Å)), and _ë_, _ï_ and _ü_ are only used marginally, exclusively in loanwords. The function `get_ikea_name()` will use the original idea if `original=TRUE`, but in the default `original=FALSE` it will substitute instances of _a_ and _o_ to _å_ or _ä_ and _ö_, respectively. If the additional argument `swedify` is set to `TRUE` (default is `FALSE`), a few minor corrections for di- and trigraphs in Swedish orthography are made.
+I've seen the _Your IKEA name is your name backwards with an umlaut on the first vowel_. I don't think this is super accurate as the only Swedish "umlauts" are _ä_ and _ö_ (and _å_ if you count [the more uniquely Swedish letter](https://en.wikipedia.org/wiki/Å)), and _ë_, _ï_ and _ü_ are only used marginally, exclusively in loanwords. The function `makea()` will use the original idea if `original=TRUE`, but in the default `original=FALSE` it will substitute instances of _a_ and _o_ to _å_ or _ä_ and _ö_, respectively. If the additional argument `swedeness` is set to `1` or `2` (default is `0`), a few minor corrections for di- and trigraphs in Swedish orthography are made.
 
 ```
-> get_ikea_name("Orbacka")
-[1] "Åkcäbro"
-> get_ikea_name("Orbacka", original=T, swedify = F)
+> makea("Orbacka")
 [1] "Äkcabro"
-> get_ikea_name("Orbacka", original=F, swedify = T)
+> makea("Orbacka", original=T, swedeness = 1)
 [1] "Äckabro"
-> get_ikea_name("Orbacka", original=T, swedify = T)
+> makea("Orbacka", original=F, swedeness = 1)
+[1] "Åckabro"
+> makea("Orbacka", original=T, swedeness = 2)
 [1] "Äckabro"
-> get_ikea_name("Schokoladechance", original=F, swedify = T)
-[1] "Eknächedälökösch"
+> makea("Chewbacca", original = F, swedeness = 2)
+[1] "Åckåbvutj"
+> makea("Schokoladechance", original=F, swedeness = 1)
+[1] "Eknåchedålokosch"
+> makea("Schokoladechance", original=F, swedeness = 2)
+[1] "Eknåtjedalokosj"
 ```
 
-Using `get_ikea_name(original=TRUE)` (note the un-Swedish characters _ü_ and _ë_):
+Using `makea(original=TRUE)` (note the un-Swedish characters _ü_ and _ë_):
 ![Original](https://raw.githubusercontent.com/borstell/fakea/master/ikea_name_original.png)
 
-Using `get_ikea_name(original=FALSE)`:
+Using `makea(original=FALSE)`:
 ![Adapted](https://raw.githubusercontent.com/borstell/fakea/master/ikea_name.png)
 
 
