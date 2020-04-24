@@ -23,7 +23,7 @@ get_cat() %>%
 ## Product label (with logo)
 
 ```
-get_type() %>%
+get_cat() %>%
   make_tag(logo=2, currency = "£")
 ```
 ![](https://raw.githubusercontent.com/borstell/fakea/master/fakea_products/fakea_mångfald.png)
