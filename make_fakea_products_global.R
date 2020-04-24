@@ -1,6 +1,7 @@
 library(tidyverse)
 library(magick)
 library(stringi)
+library(hash)
 
 get_product <- function(cat) {
   fakea <- read.csv("./fakea_products_global.csv")
@@ -123,5 +124,17 @@ make_logo <- function(logo=2, currency="$",language="sw", txt1="FEJKA", txt2="R 
   magick::image_write(im, path=destfile)
   return(destfile)
 }
+
+get_ikea_name <- function(name) {
+  d <- hash()
+  d["a"] <- c("ä", "å")
+  d["o"] <- c("ö")
+  rev_name <-stringi::stri_reverse(tolower(name))
+  ikea_name <- gsub("o", "ö", sub("a", sample(c("å", "ä"),1), rev_name))
+  ikea_name <- paste0(toupper(substr(ikea_name, 1, 1)), substr(ikea_name, 2, nchar(ikea_name)))
+  return(ikea_name)
+}
+
+# make_logo(txt1 = get_ikea_name("Umlauts"), txt2 = get_ikea_name("Your Ikeaname"), destfile = "./ikea_name.png")
 
 # make_logo(currency = "v", txt3 = "1.0.0")
