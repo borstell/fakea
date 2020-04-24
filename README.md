@@ -37,8 +37,11 @@ I've seen the _Your IKEA name is your name backwards with an umlaut on the first
 > get_ikea_name("Schokoladechance", original=F, swedify = T)
 [1] "Eknächedälökösch"
 ```
+
+Using `get_ikea_name(original=TRUE)` (note the un-Swedish characters _ü_ and _ë_):
 ![Original](https://raw.githubusercontent.com/borstell/fakea/master/ikea_name_original.png)
 
+Using `get_ikea_name(original=FALSE)`:
 ![Adapted](https://raw.githubusercontent.com/borstell/fakea/master/ikea_name.png)
 
 
